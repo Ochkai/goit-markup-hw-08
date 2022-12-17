@@ -1,7 +1,8 @@
 .partners {
   @media screen and (max-width: 479px) {
     display: block;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   display: flex;
   flex-wrap: wrap;

@@ -1523,7 +1523,8 @@ img {
 @media screen and (max-width: 479px) {
   .partners {
     display: block;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
