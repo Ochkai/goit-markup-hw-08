@@ -1412,7 +1412,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 767px) {
-  .command__item {
+  .command__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
