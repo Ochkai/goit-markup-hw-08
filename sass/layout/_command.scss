@@ -1,0 +1,48 @@
+.command {
+  background-color: $secondaryBackgroundColor;
+}
+.command__item {
+  width: 100%;
+  background-color: $primaryBackgroundColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: $cardsBorderRadius;
+  @media screen and (min-width: 768px) {
+    // flex-basis: calc((100% - 2 *#{$featuresSetGap}) / 2);
+    width: calc((100% - 2 *#{$featuresSetGap}) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    // flex-basis: calc((100% - 2 *#{$featuresSetGap}) / 2);
+    width: calc((100% - 3 *#{$featuresSetGap}) / 4);
+    margin: 15px;
+  }
+}
+.command__content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
+}
+.command__people {
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: $secondaryTextColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.command__position {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $primaryTextColor;
+}

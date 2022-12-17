@@ -1,0 +1,257 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 94px 15px;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow-y: scroll;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.backdrop__hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  width: 100%;
+  height: 609px;
+  background-color: $primaryBackgroundColor;
+  @media screen and (max-width: 768px) {
+    opacity: 1;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @media screen and (min-width: 767px) {
+    width: 100%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    height: 581px;
+  }
+}
+
+.backdrop.backdrop__hidden .modal {
+  @media screen and (max-width: 767px) {
+    opacity: 0;
+  }
+  @media screen and (min-width: 768px) {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+.button__close {
+  position: absolute;
+  top: 101px;
+  right: 23px;
+  @media screen and (min-width: 768px) {
+    top: 8px;
+    right: 8px;
+  }
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+
+  background-color: $primaryBackgroundColor;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $buttonBackgroundColor;
+  }
+}
+// Форма
+.form {
+  padding: 40px;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.group {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: flex-start;
+
+  &:first-child {
+    margin-bottom: 0;
+  }
+  &:focus-within > .group__icon {
+    fill: $linkHoverColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.group__label {
+  margin-bottom: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  font-style: normal;
+  color: $primaryTextColor;
+}
+
+.group__input {
+  padding-left: 42px;
+  outline: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus-within {
+    border: 1px solid $linkHoverColor;
+  }
+}
+.group__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group__textrea {
+  width: 100%;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: 0;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border: 1px solid $linkHoverColor;
+  }
+  &::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.group__label--checkbox {
+  width: 370px;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  @media screen and (min-width: 1200px) {
+    width: 425px;
+  }
+}
+
+.checkbox__border {
+  position: relative;
+  display: inline-block;
+  margin-right: 7px;
+  width: 15px;
+  height: 15px;
+  background-color: $primaryBackgroundColor;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox__input {
+  appearance: none;
+
+  &:checked + .checkbox__border {
+    background-color: $linkHoverColor;
+    border: 2px solid $linkHoverColor;
+  }
+  &:checked + .checkbox__border .checkbox__icon {
+    opacity: 1;
+  }
+}
+.checkbox__title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: $secondaryTextColor;
+  text-align: start;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+.checkbox__contract {
+  color: $linkHoverColor;
+  text-decoration-line: underline;
+}
+.form__button {
+  margin-top: 30px;
+  padding: 10px 52px;
+  width: 200px;
+}

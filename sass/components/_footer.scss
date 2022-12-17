@@ -1,0 +1,107 @@
+.footer {
+  background-color: $heroBackgroungColor;
+  color: $primaryBackgroundColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__position {
+  display: block;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      text-align: start;
+    }
+  }
+}
+
+.footer__group {
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.address__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: $primaryBackgroundColor;
+}
+.address__item {
+  margin-top: 12px;
+}
+.address__link {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: $primaryTextColor;
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: $linkHoverColor;
+  }
+}
+.footer__form {
+  display: block;
+
+  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.footer__input {
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: $heroBackgroungColor;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: 0;
+  color: $primaryBackgroundColor;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid $linkHoverColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
