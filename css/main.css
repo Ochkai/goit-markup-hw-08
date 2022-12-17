@@ -571,6 +571,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 20px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
