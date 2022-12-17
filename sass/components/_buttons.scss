@@ -31,7 +31,19 @@
   padding: 0;
   margin-bottom: 50px;
   list-style: none;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin-top: -4px;
+    margin-left: -4px;
+    .button__item {
+      margin: 8px;
+    }
+  }
 }
+
 .button__item:not(:last-child) {
   margin-right: 8px;
 }

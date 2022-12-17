@@ -134,8 +134,8 @@
   padding: 48px 40px;
   background-color: $primaryBackgroundColor;
   z-index: 999;
-  overflow-y: scroll;
-  overflow-x: scroll;
+  // overflow-y: scroll;
+  // overflow-x: scroll;
 
   transform: translateX(100%);
   transition-property: transform;
