@@ -1520,6 +1520,12 @@ img {
   padding: 0;
   margin: -15px;
 }
+@media screen and (max-width: 479px) {
+  .partners {
+    display: block;
+    padding: 15px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .partners {
     -ms-flex-wrap: nowrap;
@@ -1527,9 +1533,19 @@ img {
   }
 }
 
-.partners__item {
-  width: calc((100% - 2 *30px) / 2);
-  margin: 15px;
+@media screen and (max-width: 479px) {
+  .partners__item {
+    width: 100%;
+  }
+  .partners__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .partners__item {
+    width: calc((100% - 2 *30px) / 2);
+    margin: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .partners__item {
