@@ -1424,6 +1424,10 @@ img {
   }
 }
 
+.command__img {
+  width: 275px;
+}
+
 .command__content {
   padding-top: 30px;
   padding-bottom: 24px;
