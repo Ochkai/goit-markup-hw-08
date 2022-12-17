@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   fill: $primaryTextColor;
-
+  color: $primaryTextColor;
   transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
