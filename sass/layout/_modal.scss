@@ -1,7 +1,3 @@
-.backdrop__hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -21,7 +17,10 @@
     padding: 0;
   }
 }
-
+.backdrop.backdrop__hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 .backdrop.backdrop__hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }

@@ -56,9 +56,7 @@
     padding-bottom: 32px;
   }
 }
-.nav-list__link--current {
-  color: $linkHoverColor;
-}
+
 .list__contact {
   @media (min-width: 768px) {
     display: flex;
@@ -178,6 +176,9 @@
   &:focus {
     color: $linkHoverColor;
   }
+}
+.nav-list__link--current {
+  color: $linkHoverColor;
 }
 .mobile-menu__list {
   margin-bottom: 32px;

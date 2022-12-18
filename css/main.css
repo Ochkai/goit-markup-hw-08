@@ -380,10 +380,6 @@ img {
   }
 }
 
-.nav-list__link--current {
-  color: #2196f3;
-}
-
 @media (min-width: 768px) {
   .list__contact {
     display: -webkit-box;
@@ -537,6 +533,10 @@ img {
   color: #2196f3;
 }
 
+.nav-list__link--current {
+  color: #2196f3;
+}
+
 .mobile-menu__list {
   margin-bottom: 32px;
 }
@@ -686,11 +686,6 @@ img {
   padding-right: 24px;
 }
 
-.backdrop__hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -713,6 +708,11 @@ img {
   .backdrop {
     padding: 0;
   }
+}
+
+.backdrop.backdrop__hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .backdrop.backdrop__hidden .modal {
