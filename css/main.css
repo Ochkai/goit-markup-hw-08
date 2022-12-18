@@ -939,7 +939,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .group__label--checkbox {
-    width: 425px;
+    max-width: 425px;
   }
 }
 
