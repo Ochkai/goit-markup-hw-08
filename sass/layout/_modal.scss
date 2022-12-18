@@ -1,3 +1,7 @@
+.backdrop__hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -5,9 +9,9 @@
   width: 100%;
   height: 100%;
   padding: 94px 15px;
-  opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
+  opacity: 1;
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -18,60 +22,42 @@
   }
 }
 
-.backdrop__hidden {
-  opacity: 0;
-  pointer-events: none;
+.backdrop.backdrop__hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
 .modal {
   width: 100%;
-  height: 609px;
+  max-width: 450px;
+  min-height: 609px;
   background-color: $primaryBackgroundColor;
-  @media screen and (max-width: 768px) {
-    opacity: 1;
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  @media screen and (min-width: 767px) {
-    width: 100%;
-    max-width: 450px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
 
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   @media screen and (min-width: 1200px) {
+    width: 100%;
     max-width: 528px;
-    height: 581px;
+    min-height: 581px;
   }
 }
 
-.backdrop.backdrop__hidden .modal {
-  @media screen and (max-width: 767px) {
-    opacity: 0;
-  }
-  @media screen and (min-width: 768px) {
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
 .button__close {
   position: absolute;
-  top: 101px;
-  right: 23px;
-  @media screen and (min-width: 768px) {
-    top: 8px;
-    right: 8px;
-  }
+  top: 8px;
+  right: 8px;
+
   display: flex;
   align-items: center;
   width: 30px;
   height: 30px;
-  margin: 0;
-
+  margin-left: auto;
+  justify-content: end;
   background-color: $primaryBackgroundColor;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -184,7 +170,7 @@
   }
 }
 .group__label--checkbox {
-  width: 370px;
+  max-width: 370px;
   display: inline-flex;
   align-items: center;
   margin: 0;
@@ -239,7 +225,7 @@
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: $secondaryTextColor;
-  text-align: start;
+  text-align: center;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
